@@ -1,1 +1,1 @@
-# for_linuxcnc
+# Всё для LinuxCNC
