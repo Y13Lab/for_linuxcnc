@@ -23,13 +23,13 @@ NativeCAM, в прошлом LinuxCNC Features, <br />
 Откроется окно мастера,закрываем его и запускаем свой конфиг станка.
 
 ### Примеры:
-ncam -i Stanok.ini -c mill
-ncam -i Stanok.ini -c lathe
-ncam -i Stanok.ini -c plasma
+ncam -i Stanok.ini -c mill <br />
+ncam -i Stanok.ini -c lathe <br />
+ncam -i Stanok.ini -c plasma <br />
 
-ncam -i Stanok.ini -t mill
-ncam -i Stanok.ini -t lathe
-ncam -i Stanok.ini -t plasma
+ncam -i Stanok.ini -t mill <br />
+ncam -i Stanok.ini -t lathe <br />
+ncam -i Stanok.ini -t plasma <br />
 
 Исходники
 https://github.com/FernV/NativeCAM
