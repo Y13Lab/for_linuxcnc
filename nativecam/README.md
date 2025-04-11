@@ -1,4 +1,4 @@
-# NativeCAM LinuxCNC
+### NativeCAM LinuxCNC
 
 NativeCAM, в прошлом LinuxCNC Features,<br />
 это набор шаблонных программ для создания Gкода обработки прямо на стойке.<br />
