@@ -9,5 +9,5 @@ NativeCAM, в прошлом LinuxCNC Features,<br />
 с помощью программы установки пакетов gdebi.<br />
 Если gdebi не установлен в системе то установите <br />
 его спомощью менеджера пакетов Synaptic.<br />
-Установка вручную: sudo dpkg -i nativecam_0.1.14b_all.deb <br />
+Установка вручную (не проверял): sudo dpkg -i nativecam_0.1.14b_all.deb <br />
 Установить все отсутствующие зависимости: sudo apt --fix-broken install <br />
