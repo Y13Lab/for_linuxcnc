@@ -14,3 +14,22 @@ NativeCAM, в прошлом LinuxCNC Features, <br />
 В терминале выполняем: ncam -h если вылезла помощь значит пакет установился. <br />
 
 ### Настройка:
+Создаем конфиг своего станка, парпимер с именем Stanok
+заходим в терминале в каталог станка: cd ~/linuxcnc/configs/Stanok
+выполняем: ncam -i Stanok.ini -c lathe
+где lathe может быть plasma или mill смотря что вам надо.
+Если использовать опцию -t вместо -c он будет встроен во вкладку.
+Должно создать бекап ini файла и дописать конфигурацию станка.
+Откроется окно мастера,закрываем его и запускаем свой конфиг станка.
+
+### Примеры:
+ncam -i Stanok.ini -c mill
+ncam -i Stanok.ini -c lathe
+ncam -i Stanok.ini -c plasma
+
+ncam -i Stanok.ini -t mill
+ncam -i Stanok.ini -t lathe
+ncam -i Stanok.ini -t plasma
+
+Исходники
+https://github.com/FernV/NativeCAM
