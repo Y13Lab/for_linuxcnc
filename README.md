@@ -1,11 +1,7 @@
-### Для начинающих в LinuxCNC
+### NativeCAM
 
-Автоматический Вход <br />
-sudo geany /etc/lightdm/lightdm.conf <br />
-autologin-user=y13lab <br />
+NativeCAM, в прошлом LinuxCNC Features, <br />
+это набор шаблонных программ для создания Gкода обработки прямо на стойке. <br />
+Доступны "мастера" для фрезерной, токарной обработки и плазменной резки. <br />
 
-Изолирование Ядра <br />
-sudo geany /etc/default/grub <br />
-GRUB_CMDLINE_LINUX_DEFAULT="quiet isolcpus=3" <br />
-обновить загрузчик <br />
-sudo update-grub <br />
+### PYNGCGUI
