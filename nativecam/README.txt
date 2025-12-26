@@ -38,4 +38,5 @@ ncam -i Stanok.ini -t plasma
 
 https://github.com/FernV/NativeCAM
 Поддерживает LinuxCNC до 2.8.4 установка на LinuxCNC 2.9.3 обсуждается тут:
+
 https://forum.linuxcnc.org/nativecam/53492-nativecam-on-linuxcnc-2-9-3?start=0
