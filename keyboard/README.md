@@ -2,13 +2,15 @@
 
 Установить matchbox-keyboard с помощью менеджера пакетов Synaptic
 
-Создать папку для своей темы matchbox-keyboard <br />
-mkdir ~/.matchbox <br />
+Создать папку для своей темы matchbox-keyboard, <br />
+в терминале ввести mkdir ~/.matchbox <br />
 Скопировать туда свою тему keyboard.xml <br />
 
-Сделать matchbox-keyboard приорететной в gmoccapy <br />
+Если уже установлена виртуальная клавиатура Onboard <br />
+но хочется чтобы в LinuxCNC была matchbox-keyboard, <br />
+надо сделать её приорететной в gmoccapy. <br />
 sudo geany /usr/bin/gmoccapy <br />
-С 1943 по 1971 строку заменить <br />
+Примерно с 1943 по 1971 строку заменить на <br />
 
     # shows "Onboard" virtual keyboard if available
     # else error message
