@@ -1,3 +1,7 @@
+### Keyboard
+
+Немного изменённая тема для виртуальной клавиатуре matchbox-keyboard.
+
 ### NativeCAM
 
 NativeCAM, в прошлом LinuxCNC Features, <br />
