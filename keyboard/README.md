@@ -2,16 +2,13 @@
 
 Установить matchbox-keyboard с помощью менеджера пакетов Synaptic
 
-Создать папку для своей темы matchbox-keyboard
-mkdir ~/.matchbox
-Скопировать туда свою тему keyboard.xml
+Создать папку для своей темы matchbox-keyboard <br />
+mkdir ~/.matchbox <br />
+Скопировать туда свою тему keyboard.xml <br />
 
-Сделать matchbox-keyboard приорететной в gmoccapy
-sudo geany /usr/bin/gmoccapy
-С 1943 по 1971 строку заменить
-
-# =============================================================
-# Onboard keybord handling Start
+Сделать matchbox-keyboard приорететной в gmoccapy <br />
+sudo geany /usr/bin/gmoccapy <br />
+С 1943 по 1971 строку заменить <br />
 
     # shows "Onboard" virtual keyboard if available
     # else error message
