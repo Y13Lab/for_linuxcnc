@@ -1,1 +1,14 @@
+### NGCGUI Gmoccapy
 
+[DISPLAY] <br />
+EMBED_TAB_NAME = NGCGUI <br />
+EMBED_TAB_LOCATION = ntb_user_tabs <br />
+EMBED_TAB_COMMAND = gladevcp -x {XID} pyngcgui.ui <br />
+NGCGUI_SUBFILE = проточка.ngc <br />
+NGCGUI_SUBFILE = расточка.ngc <br />
+NGCGUI_SUBFILE = резьба.ngc <br />
+NGCGUI_SUBFILE = сверление.ngc <br />
+NGCGUI_SUBFILE = шнек.ngc <br />
+
+[RS274NGC] <br />
+SUBROUTINE_PATH = ngcgui <br />
