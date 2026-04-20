@@ -2,6 +2,10 @@
 
 Немного изменённая тема для виртуальной клавиатуры matchbox-keyboard.
 
+### Macros
+
+
+
 ### NativeCAM
 
 NativeCAM, в прошлом LinuxCNC Features, <br />
