@@ -3,6 +3,7 @@
 Макросы добавляются во вкладку MDI <br />
 
 Добавить в Ваш станок.ini <br />
+
 [RS274NGC] <br />
 SUBROUTINE_PATH = macros <br />
 
