@@ -1,5 +1,6 @@
-### Макросы для встройки в Gmoccapy во вкладку MDI
+### Макросы для встройки в интерфейс Gmoccapy
 
+Добавить в Ваш станок.ini
 [RS274NGC] <br />
 SUBROUTINE_PATH = macros <br />
 
