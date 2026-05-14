@@ -2,7 +2,7 @@
 
 Скопировать pyngcgui.ui в папку станка. <br />
 
-В Ваш станок.ini добавить: <br />
+В ваш станок.ini добавить: <br />
 
 [DISPLAY] <br />
 EMBED_TAB_NAME = NGCGUI <br />
