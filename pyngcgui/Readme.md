@@ -1,5 +1,9 @@
 ### NGCGUI Gmoccapy
 
+Скопировать pyngcgui.ui в папку станка. <br />
+
+В Ваш станок.ini добавить: <br />
+
 [DISPLAY] <br />
 EMBED_TAB_NAME = NGCGUI <br />
 EMBED_TAB_LOCATION = ntb_user_tabs <br />
