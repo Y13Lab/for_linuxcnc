@@ -29,16 +29,18 @@ sudo geany /etc/lightdm/lightdm.conf <br />
 autologin-user=ваше имя пользователя <br />
 
 Изолирование Ядра <br />
+в терминале ввести <br />
 sudo geany /etc/default/grub <br />
-sudo mousepad /etc/default/grub <br />
+добавить isolcpus=3 для 4х ядерного cpu
 GRUB_CMDLINE_LINUX_DEFAULT="quiet isolcpus=3" <br />
 Обновить загрузчик <br />
+в терминале ввести <br />
 sudo update-grub <br />
 
 Добавление архивных репозиториев <br />
+в терминале ввести <br />
 sudo geany /etc/apt/sources.list <br />
-sudo mousepad /etc/apt/sources.list <br />
-Debian 10 buster <br />
+Для Debian 10 buster <br />
 deb http://archive.debian.org/debian buster main contrib non-free <br />
 deb http://archive.debian.org/debian buster-updates main contrib non-free <br />
 deb http://archive.debian.org/debian-security buster/updates main contrib non-free <br />
