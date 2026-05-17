@@ -1,4 +1,6 @@
-﻿Установить matchbox-keyboard с помощью менеджера пакетов Synaptic
+Keyboard
+
+Установить matchbox-keyboard с помощью менеджера пакетов Synaptic
 
 Создать папку для своей темы matchbox-keyboard,
 в терминале ввести mkdir ~/.matchbox
