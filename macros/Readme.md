@@ -8,9 +8,9 @@
 Добавить в Ваш станок.ini <br />
 
 [MACROS] <br />
-MACRO = go_to_home <br />
-MACRO = go_to_zero <br />
 MACRO = probe_z <br />
+MACRO = go_to_zero <br />
+MACRO = go_to_home <br />
 
 [RS274NGC] <br />
 SUBROUTINE_PATH = macros <br />
