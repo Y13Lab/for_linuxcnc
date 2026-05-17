@@ -22,22 +22,22 @@ NativeCAM, в прошлом LinuxCNC Features, <br />
  
 ### Начинающему для LinuxCNC
 
-Автоматический Вход <br />
+### Автоматический Вход <br />
 в терминале ввести <br />
 sudo geany /etc/lightdm/lightdm.conf <br />
 раскомментировать <br />
 autologin-user=ваше имя пользователя <br />
 
-Изолирование Ядра <br />
+### Изолирование Ядра <br />
 в терминале ввести <br />
 sudo geany /etc/default/grub <br />
 добавить isolcpus=3 для 4х ядерного cpu
 GRUB_CMDLINE_LINUX_DEFAULT="quiet isolcpus=3" <br />
-Обновить загрузчик <br />
+### Обновить загрузчик <br />
 в терминале ввести <br />
 sudo update-grub <br />
 
-Добавление архивных репозиториев <br />
+### Добавление архивных репозиториев <br />
 в терминале ввести <br />
 sudo geany /etc/apt/sources.list <br />
 Для Debian 10 buster <br />
