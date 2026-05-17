@@ -1,0 +1,55 @@
+(info: Расточка внутреннего диаметра)
+
+o<расточка>sub
+      #<Start_Dia> =  #1 (=13 Начальный диаметр)
+      #<Final_Dia> =  #2 (=17 Конечный диаметр)
+   #<Z_StartOfCut> =  #3 (=2 Z начало обработки)
+     #<Z_EndOfCut> =  #4 (=-20 Z конец обработки)
+      #<Depth_Cut> =  #5 (=0.2 Глубина прохода)
+      #<Faska_Cut> =  #6 (=0 Не используется)
+   #<SurfaceSpeed> =  #7 (=40 Поверхн. скорость)
+       #<FeedRate> =  #8 (=50 Подача мм/мин)
+   #<HeightTravel> =  #9 (=0.1 Высота перемещений)
+        #<Max_RPM> = #10 (=2000 Макс. обороты)
+     #<ToolNumber> = #11 (=0 № интструмента)
+        #<Coolant> = #12 (=9 Охл вкл=8 выкл=9)
+
+#<Depth_Cut> = [#<Depth_Cut> * 2]
+#<HeightTravel> = [#<HeightTravel> * 2]
+
+M6 T#<ToolNumber>
+; G43: Смещение длины инструмента
+; G7:  Режим диаметра
+; G96: Постоянная поверхностная скорость
+G43 G7 G96 D#<Max_RPM> S#<SurfaceSpeed>
+M3 M#<Coolant> ; spindle cw, coolant on/off
+
+G0 Z#<Z_StartOfCut>
+X#<Start_Dia>
+#<Current-Diameter> = #<Start_Dia>
+
+o100 while [#<Current-Diameter> ne #<Final_Dia>]
+
+O101   if [#<Current-Diameter> + #<Depth_Cut> lt #<Final_Dia>]
+         #<Current-Diameter> = [#<Current-Diameter> + #<Depth_Cut>]
+O101   else
+         #<Current-Diameter> = #<Final_Dia>
+O101   endif
+
+       X#<Current-Diameter>
+       G1 Z#<Z_EndOfCut> F#<FeedRate>
+       G0 X[#<Current-Diameter> - #<HeightTravel>]
+       Z#<Z_StartOfCut>
+	   
+o100 endwhile
+
+G0 X#<Start_Dia>
+Z#<Z_StartOfCut>
+
+M5  ;Выключить шпиндель
+M9  ;Выключить охлаждение
+G49 ;Выключить смещение инструмента 
+G97 S1000 ;Включмть режим 1000 об/мин.
+
+o<расточка>endsub
+M2
