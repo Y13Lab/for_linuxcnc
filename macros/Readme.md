@@ -10,7 +10,7 @@
 [MACROS] <br />
 MACRO = go_to_home <br />
 MACRO = go_to_zero <br />
-MACRO = go_to_position <br />
+MACRO = probe_z <br />
 
 [RS274NGC] <br />
 SUBROUTINE_PATH = macros <br />
