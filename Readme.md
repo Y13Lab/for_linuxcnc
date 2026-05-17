@@ -23,8 +23,9 @@ NativeCAM, в прошлом LinuxCNC Features, <br />
 ### Начинающему для LinuxCNC
 
 Автоматический Вход <br />
+в терминале ввести <br />
 sudo geany /etc/lightdm/lightdm.conf <br />
-sudo mousepad /etc/lightdm/lightdm.conf <br />
+раскомментировать <br />
 autologin-user=ваше имя пользователя <br />
 
 Изолирование Ядра <br />
