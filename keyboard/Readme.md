@@ -10,7 +10,7 @@
 но хочется чтобы в LinuxCNC была matchbox-keyboard, <br />
 надо сделать её приорететной в gmoccapy. <br />
 в терминале ввести sudo geany /usr/bin/gmoccapy <br />
-Примерно с 1943 по 1971 строку заменить на <br />
+Примерно с 1946 по 1971 строку заменить на <br />
 
     # shows "Onboard" virtual keyboard if available
     # else error message
