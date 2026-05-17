@@ -4,7 +4,7 @@
 
 ### Macros
 
-Макросы для встройки в Gmoccapy во вкладку MDI.
+Макросы для встройки в Gmoccapy на вкладку MDI.
 
 ### NativeCAM
 
