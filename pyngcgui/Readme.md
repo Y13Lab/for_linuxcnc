@@ -14,3 +14,6 @@ NGCGUI_SUBFILE = сверление.ngc <br />
 
 [RS274NGC] <br />
 SUBROUTINE_PATH = ngcgui <br />
+если уже есть папка, например macros <br />
+то папки пишем через : без пробелов. <br />
+SUBROUTINE_PATH = macros:ngcgui <br />
