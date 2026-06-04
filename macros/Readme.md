@@ -16,4 +16,4 @@ MACRO = go_to_home <br />
 SUBROUTINE_PATH = macros <br />
 если уже есть папка, например ngcgui <br />
 то папки пишем через : без пробелов. <br />
-SUBROUTINE_PATH = macros:ngcgui <br />
+SUBROUTINE_PATH = ngcgui:macros <br />
