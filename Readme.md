@@ -41,7 +41,7 @@ sudo update-grub <br />
 в терминале ввести <br />
 sudo geany /etc/apt/sources.list <br />
 Для Debian 10 buster <br />
-deb http​&#65279;://archive.debian.org/debian buster main contrib non-free <br />
+deb ht<span>tp​://archive.debian.org/debian buster main contrib non-free <br />
 deb http​&#65279;://archive.debian.org/debian buster-updates main contrib non-free <br />
 deb http​&#65279;://archive.debian.org/debian-security buster/updates main contrib non-free <br />
 не обезательно <br />
