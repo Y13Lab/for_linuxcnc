@@ -1,0 +1,85 @@
+%
+
+(------------Bezopas_X ------- )
+
+(Zona_0  Zona_1  Zona_2  Zona_3)
+(  \                  ---------)
+(   \                /         )
+(    \              /          )
+(     \            /           )
+(      ------------            )
+
+(*********** Nastroiki ********)
+
+#<HeightTravel>=20       ( Bezopas_X )
+#<Start_Dia>=17          ( Zagotovka_X )
+#<Z_StartOfCut>=0        ( Start_Z )
+#<Z_Dlina_Zona_3>=-20    ( Z_Dlina_Zona_3)
+#<Z_Dlina_Zona_2>=-40    ( Z_Dlina_Zona_2)
+#<Z_Dlina_Zona_1>=-60    ( Z_Dlina_Zona_1)
+#<Z_Dlina_Zona_0>=-70    ( Z_Dlina_Zona_0)
+#<EndDiam_Zona_3>=13     ( End_Diam_Zona_3)
+#<EndDiam_Zona_1>=9      ( End_Diam_Zona_1)
+#<ShagShneka>=16         ( Shag shneka in mm)
+#<Depth_Cut>=1           ( Sjem za prohod na diametr)
+#<ShirinaKanavki>=10     ( SHIRINA KANAVKI )
+#<SmechenieRezca>=5      ( SMEHENIE REZCA PO Z )
+#<Speed_Z>=1000          (Max 1000 mm/min)
+
+;#<chislo prohodov> = [[[#<EndDiam_Zona_3>] - [#<EndDiam_Zona_1>]] / #<Depth_Cut>]
+;#<Smechenie_konusa> = [[[#<Z_Dlina_Zona_3>] - [#<Z_Dlina_Zona_2>]] / #<chislo prohodov>]
+
+G90 G18 G7
+S[#<Speed_Z> / #<ShagShneka>] M3
+G4 P1 (pause for spindle)
+
+#70=0
+#75=0
+#80=0
+#85=0
+#90=0
+
+(************ cut Zona_3,2,1 ***************)
+o100 do
+#75=0
+#70=[#70-#<Depth_Cut>]
+  o105 do
+	G0 X[#<HeightTravel>]                                 ( Bezopas_X )
+	G0 Z[#<Z_StartOfCut> - #75]                           ( Start_Z )
+	G0 Z[#<Z_StartOfCut> - #75]   X[#<Start_Dia> + #70]   (Start point)
+
+	G33 X[#<Start_Dia> + #70]   Z[#<Z_Dlina_Zona_3>]   K[#<ShagShneka>]   (cut Zona_3)
+	G33 X[#<Start_Dia> + #70]   Z[#<Z_Dlina_Zona_2>]   K[#<ShagShneka>]   (cut Zona_2)
+	G33 X[#<Start_Dia> + #70]   Z[#<Z_Dlina_Zona_1>]   K[#<ShagShneka>]   (cut Zona_1)
+	G33 X[#<Start_Dia>]         Z[#<Z_Dlina_Zona_0>]   K[#<ShagShneka>]   (cut Zona_0)
+
+	G0 X[#<HeightTravel>] ( Bezopas_X )
+	G0 Z[#<Z_StartOfCut> - #75]  ( Start_Z)
+
+	#75=[#75 + #<SmechenieRezca>] ( SMEHENIE REZCA PO Z)
+	o105 while [[#75] LT [#<ShirinaKanavki>]]
+o100 while [[#<Start_Dia> + #70] GT [#<EndDiam_Zona_3>]]
+
+(************ cut Zona_2,1 ***************)
+o110 do
+#85=0
+#80=[#80-#<Depth_Cut>]
+;#90=[#90 + #<Smechenie_konusa>]
+  o115 do
+	G0 X[#<HeightTravel>]                                  ( Bezopas_X )
+	G0 Z[#<Z_StartOfCut> - #85]                            ( Start_Z )
+	G0  Z[#<Z_StartOfCut> - #85]   X[#<Start_Dia> + #70]   (Start point)
+
+	G33 X[#<Start_Dia> + #70]         Z[#<Z_Dlina_Zona_3>]          K[#<ShagShneka>]   (cut Zona_3)
+	G33 X[#<Start_Dia> + #70 + #80]   Z[#<Z_Dlina_Zona_2>]          K[#<ShagShneka>]   (cut Zona_2)
+	G33 X[#<Start_Dia> + #70 + #80]   Z[#<Z_Dlina_Zona_1>]          K[#<ShagShneka>]   (cut Zona_1)
+	G33 X[#<Start_Dia>]               Z[#<Z_Dlina_Zona_0>]          K[#<ShagShneka>]   (cut Zona_0)
+
+	G0 X[#<HeightTravel>]         ( Bezopas_X )
+	G0 Z[#<Z_StartOfCut> - #85]   ( Start_Z )
+
+	#85=[#85 + #<SmechenieRezca>] ( SMEHENIE REZCA PO Z)
+	o115 while [[#85] LT [#<ShirinaKanavki>]]
+o110 while [[#<Start_Dia> + #70 + #80] GT [#<EndDiam_Zona_1>]]
+
+M30
